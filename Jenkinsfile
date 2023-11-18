@@ -23,6 +23,7 @@ pipeline {
                     def version = sh(script: 'node -pe "require(\'./package.json\').version"', returnStdout: true).trim()
                     env.VERSION = version
                     echo "Install project ${PROJECT_NAME} version ${env.VERSION}"
+                    echo "Scan success"
                 }
             }
         }
